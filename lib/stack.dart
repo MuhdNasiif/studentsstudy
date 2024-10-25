@@ -29,7 +29,7 @@ class StackStudy extends StatelessWidget {
               color: Colors.green,
             ),
           ),
-          Positioned(
+          Positioned(      
             top: 60,
             left: 60,
             child: Container(

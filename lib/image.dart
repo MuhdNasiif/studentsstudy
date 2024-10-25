@@ -5,18 +5,21 @@ class Imagestudy extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(title: Text("Iamge Study"),),
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Iamge Study"),
+      ),
       body: Column(
         children: [
-          Text("Image Study"),
-          Container(
-            height: 250,
-            width: 250,
-            color: Colors.amber,
-            child: Image.asset("asset/profile.jpg",height: 100,width: 100,),
+          Image.asset(
+            "asset/Screenshot (216).png",
           ),
-          Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY3yonslI62_x8DG9jXOLAQNv3Upv-Z1UDQg&s")
+          Container(
+            height: 300,
+            width: 200,
+            color: Colors.amber,
+              child: Image.network(
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPyv4JFGLfaMV99VLNvo8qWPJR7MlV4DdR7w&s",fit: BoxFit.fill,))
         ],
       ),
     );

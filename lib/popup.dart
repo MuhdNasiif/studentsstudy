@@ -40,7 +40,7 @@ class _CameraandGalleryState extends State<CameraandGallery> {
                               setState(() {
                                 if (camera != null) {
                                   imageFile = File(camera.path);
-                                }
+                                } 
                               });
                             },
                             child: const Text(
@@ -85,6 +85,3 @@ class _CameraandGalleryState extends State<CameraandGallery> {
   }
 }
 
-//   void _showChooseDialog(BuildContext context, File imageFile,ImagePicker picker) {
-    
-// }

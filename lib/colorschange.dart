@@ -24,12 +24,7 @@ class _ColorsChangeState extends State<ColorsChange> {
             // width: 200,
             //   color:valuesChange==true ? Colors.red : Colors.amber
               
-            // ),
-            // SizedBox(height: 20,),
-            //  Container( height: 50,
-            // width: 200,
-            //    color:valuesChange==true ? Colors.amber : Colors.red
-            // ),
+            //  
             Row(
               mainAxisAlignment:  MainAxisAlignment.center,
               children: [

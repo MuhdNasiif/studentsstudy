@@ -14,7 +14,7 @@ class _NewApiState extends State<NewApi> {
     var url = "https://reqres.in/api/users?page=2";
     var response = await http.get(Uri.parse(url));
     var res = jsonDecode(response.body);
-    final data = ApiModel.fromJson(res);
+    final data = ApiModel.fromJson(res); 
     return data;
   }
 

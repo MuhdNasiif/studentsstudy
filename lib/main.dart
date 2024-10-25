@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:statefull_start/apistudy.dart';
-import 'package:statefull_start/apiteach.dart';
 import 'package:statefull_start/calculator.dart';
-import 'package:statefull_start/colorschange.dart';
+import 'package:statefull_start/dogapi.dart';
+import 'package:statefull_start/dollartoinr.dart';
+import 'package:statefull_start/gridviewstdy.dart';
 import 'package:statefull_start/image.dart';
-import 'package:statefull_start/newapi.dart';
-import 'package:statefull_start/newhome.dart';
+import 'package:statefull_start/loginpagevalidate.dart';
 import 'package:statefull_start/popup.dart';
 import 'package:statefull_start/stack.dart';
 void main() {
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:   ColorsChange(),
+      home:   DogApiStudy(),
     );
   }
 }

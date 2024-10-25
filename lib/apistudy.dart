@@ -11,26 +11,23 @@ class ApiStudy extends StatefulWidget {
 }
 
 class _ApiStudyState extends State<ApiStudy> {
-  var x=""; 
-  var error="";
+ 
 
-
-
-
-  Future<DogApiModel?>getData()async{
+  Future<DogApiModel?>getData() async {
     var url= "https://dog.ceo/api/breeds/image/random";
     var response= await get(Uri.parse(url));
     var res =jsonDecode(response.body);
-    
-    if (response.statusCode==500){
-      print("No data");
-    }else if(response.statusCode==200){
       var data = DogApiModel.fromJson(res);
       return data;
-    }else {}
-    return null;
-
   }
+
+
+
+
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +39,7 @@ class _ApiStudyState extends State<ApiStudy> {
           builder: (context, snapshot) {
             if(snapshot.hasData){  
             return Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.network(snapshot.data!.message.toString()),
