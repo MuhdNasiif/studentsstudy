@@ -86,10 +86,10 @@ class NewHomePage extends StatelessWidget {
               ),
               Row(
                 children: [
-                 CircleWidget(),
-                 CircleWidget(),
-                 CircleWidget(),
-                 CircleWidget(),
+                  CircleWidget(),
+                  CircleWidget(),
+                  CircleWidget(),
+                  CircleWidget(),
                 ],
               )
             ],
@@ -97,39 +97,42 @@ class NewHomePage extends StatelessWidget {
         ));
   }
 }
+
 //--------------------------------------------------------------------------------
 class CircleWidget extends StatelessWidget {
   const CircleWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return   Column(
-                    children: [
-                      Container(
-                        width: 51.79,
-                        height: 50.40,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border:
-                              Border.all(width: 2.0, color: const Color(0xFF3C3697)),
-                          color: Colors.white,
-                        ),
-                        child: const Icon(Icons.home,color: Color(0xFF3C3697),),
-                      ),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      const Text(
-                        'Home Work',
-                        style: TextStyle(
-                          color: Color(0xFF333333),
-                          fontSize: 10,
-                          fontFamily: 'Baloo Paaji 2',
-                          fontWeight: FontWeight.w600,
-                          height: 0,
-                        ),
-                      ),
-                    ],
-                  );
+    return Column(
+      children: [
+        Container(
+          width: 51.79,
+          height: 50.40,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            border: Border.all(width: 2.0, color: const Color(0xFF3C3697)),
+            color: Colors.white,
+          ),
+          child: const Icon(
+            Icons.home,
+            color: Color(0xFF3C3697),
+          ),
+        ),
+        const SizedBox(
+          height: 5,
+        ),
+        const Text(
+          'Home Work',
+          style: TextStyle(
+            color: Color(0xFF333333),
+            fontSize: 10,
+            fontFamily: 'Baloo Paaji 2',
+            fontWeight: FontWeight.w600,
+            height: 0,
+          ),
+        ),
+      ],
+    );
   }
 }

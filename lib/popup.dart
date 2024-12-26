@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 class CameraandGallery extends StatefulWidget {
-  CameraandGallery({Key? key});
+  const CameraandGallery({Key? key});
 
   @override
   State<CameraandGallery> createState() => _CameraandGalleryState();

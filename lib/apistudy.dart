@@ -11,8 +11,7 @@ class ApiStudy extends StatefulWidget {
 }
 
 class _ApiStudyState extends State<ApiStudy> {
- 
-
+  
   Future<DogApiModel?>getData() async {
     var url= "https://dog.ceo/api/breeds/image/random";
     var response= await get(Uri.parse(url));
@@ -20,13 +19,6 @@ class _ApiStudyState extends State<ApiStudy> {
       var data = DogApiModel.fromJson(res);
       return data;
   }
-
-
-
-
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +62,7 @@ class _ApiStudyState extends State<ApiStudy> {
 }
 
 
-
+//-----------------------------------------------------------------------------------------------
 
 
 class DogApiModel {

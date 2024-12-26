@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
- 
 
 class NewApiteach extends StatefulWidget {
   const NewApiteach({Key? key}) : super(key: key);
@@ -11,10 +10,6 @@ class NewApiteach extends StatefulWidget {
 }
 
 class _NewApiState extends State<NewApiteach> {
-
-
-
-  
   Future<Listusers> getData() async {
     var url = "https://reqres.in/api/users?page=2";
     var response = await http.get(Uri.parse(url));
@@ -38,11 +33,10 @@ class _NewApiState extends State<NewApiteach> {
                 return Expanded(
                   child: ListView.separated(
                     itemBuilder: (context, index) {
-                      return  ListTile(
+                      return ListTile(
                         tileColor: Colors.amber,
-                        leading: const Text(
-                          "1",
-                        ),
+                        leading:
+                            Text(snapshot.data!.data![index].id.toString()),
                         title: const Text(
                           "ASDFGHJ",
                         ),

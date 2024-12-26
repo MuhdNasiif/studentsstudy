@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'dart:convert';
-
 import 'package:http/http.dart';
+import 'package:statefull_start/apistudy.dart';
 
-class DogApiStudy extends StatefulWidget {
-  const DogApiStudy({super.key});
+class DogApis extends StatefulWidget {
+  const DogApis({super.key});
 
   @override
-  State<DogApiStudy> createState() => _DogApiStudyState();
+  State<DogApis> createState() => _DogApisState();
 }
 
-class _DogApiStudyState extends State<DogApiStudy> {
-  Future<DogApiModel> getDogApiData() async {
+class _DogApisState extends State<DogApis> {
+  Future<DogApiModel> getApiData() async {
     var url = "https://dog.ceo/api/breeds/image/random";
     var response = await get(Uri.parse(url));
     var res = jsonDecode(response.body);
@@ -22,52 +22,51 @@ class _DogApiStudyState extends State<DogApiStudy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("API Study"),
-      ),
-      body: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: FutureBuilder(
-            future: getDogApiData(),
-            builder: (context, snapshot) {
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Image.network(snapshot.data!.message.toString()),
-                ],
-              );
-            },
-          )),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        setState(() {});
-        getDogApiData();
-      }),
-    );
+        appBar: AppBar(
+          title: const Text("API Study"),
+        ),
+        body: Padding(
+            padding: EdgeInsets.all(8.0),
+            child: FutureBuilder(
+                future: getApiData(),
+                builder: (context, snapshot) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.network(snapshot.data!.message.toString())
+                    ],
+                  );
+                })),
+        floatingActionButton: FloatingActionButton(onPressed: () {
+          setState(() {});
+
+          getApiData();
+        }));
   }
 }
 
-//----------------------------------------------------------------
+//-------------------------------------------------------------------------------
 
 // To parse this JSON data, do
 //
-//     final dogApiModel = dogApiModelFromJson(jsonString);
+//     final dogapiModel = dogapiModelFromJson(jsonString);
 
-DogApiModel dogApiModelFromJson(String str) =>
-    DogApiModel.fromJson(json.decode(str));
+DogapiModel dogapiModelFromJson(String str) =>
+    DogapiModel.fromJson(json.decode(str));
 
-String dogApiModelToJson(DogApiModel data) => json.encode(data.toJson());
+String dogapiModelToJson(DogapiModel data) => json.encode(data.toJson());
 
-class DogApiModel {
+class DogapiModel {
   String? message;
   String? status;
 
-  DogApiModel({
+  DogapiModel({
     this.message,
     this.status,
   });
 
-  factory DogApiModel.fromJson(Map<String, dynamic> json) => DogApiModel(
+  factory DogapiModel.fromJson(Map<String, dynamic> json) => DogapiModel(
         message: json["message"],
         status: json["status"],
       );

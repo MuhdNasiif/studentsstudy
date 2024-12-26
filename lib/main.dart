@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:statefull_start/apistudy.dart';
 import 'package:statefull_start/calculator.dart';
+import 'package:statefull_start/demo.dart';
 import 'package:statefull_start/dogapi.dart';
 import 'package:statefull_start/dollartoinr.dart';
+import 'package:statefull_start/drawerstudy.dart';
+import 'package:statefull_start/getstudydog.dart';
 import 'package:statefull_start/gridviewstdy.dart';
 import 'package:statefull_start/image.dart';
 import 'package:statefull_start/loginpagevalidate.dart';
 import 'package:statefull_start/popup.dart';
 import 'package:statefull_start/stack.dart';
+import 'package:statefull_start/stopwatch.dart';
+import 'package:statefull_start/tabbarstdy.dart';
+import 'package:statefull_start/timer.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -24,7 +30,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home:   DogApiStudy(),
+      home:   DemoStudyss()
     );
   }
 }
